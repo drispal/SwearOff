@@ -1,4 +1,6 @@
 
+#SwearOff API V.1
+
 import wave
 import json
 import os
