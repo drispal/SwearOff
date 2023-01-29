@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+<h1>SwearOff</h1>
+<h2>Here is your censured audio</h2>
+<p>
+	<form method="post">
+		{% csrf_token %}
+		<button type="submit" class="btn btn-success">DOWNLOAD</button>
+	</form>
+	
+</p>
+{% endblock %}
