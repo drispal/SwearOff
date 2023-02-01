@@ -103,7 +103,3 @@ for word in list_of_Words:
         replace_sound = original_replace_sound[0:duration]
         result_sound = result_sound.overlay(replace_sound, position=word.start*1000, gain_during_overlay=-30)
 result_sound.export("result.wav", format="wav")
-
-
-
-
