@@ -94,9 +94,9 @@ def Censored(audio_filename, lang, audioModel):
             result_sound = result_sound.overlay(replace_sound, position=word.start*1000, gain_during_overlay=-30)
     result_sound.export("media/converted/result.wav", format="wav")
 
-    #Adding to model (to fix)
-    local_file = open('media/converted/result.wav')
-    audioModel.censored_audio.save('new',File(local_file))
+    #Adding to model (to fix) 
+    local_file = open('media/converted/result.wav', "rb")
+    audioModel.censored_audio.save('result.wav',File(local_file))
     local_file.close()
 
 

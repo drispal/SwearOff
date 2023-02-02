@@ -23,7 +23,7 @@ def downloadView(request):
 	audio = Audio.objects.get(id=request.session['fileId'])
 	if request.method == 'POST':		
 		response = FileResponse(audio.censored_audio, as_attachment=True)
-		audios.delete()
+		audio.delete()
 		return response
 	else :
 		Censored(audio.audio.path,audio.language, audio)
